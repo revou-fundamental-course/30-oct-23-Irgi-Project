@@ -1,4 +1,207 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #fede3e;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 650px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 12px;
+    display: grid;
+    gap: 1rem;
+}
+
+.container .judul-box {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container .input-error {
+    color: red;
+    text-align: center;
+    display: none;
+}
+
+.box {
+    display: grid;
+    gap: 1rem;
+}
+
+.box div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.box label {
+    width: 120px;
+    font-size: medium;
+    font-weight: bolder;
+}
+
+.box .form-gender {
+    font-size: medium;
+    font-weight: bolder;
+
+}
+
+.box input {
+    width: 100%;
+    border: 2px solid darkgray;
+    ;
+    border-radius: 5px;
+    padding: 7px;
+    outline-color: black;
+    text-align: center;
+    font-size: medium;
+}
+
+.box button {
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.box button[type="reset"] {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 11px;
+}
+
+.box button:hover {
+    background-color: rgb(246 247 252);
+}
+
+.box button[type="reset"]:hover {
+    background-color: rgb(0 0 0 / 80%)
+}
+
+.bmi-scale {
+    display: flex;
+}
+
+.bmi-scale div {
+    flex: 1;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.bmi-scale div p {
+    font-size: medium;
+
+}
+
+.bmi-scale .scale-kurang P {
+    color: orange;
+    text-shadow: 1px 0.5px #000000;
+}
+
+.bmi-scale .scale-normal P {
+    color: green;
+    text-shadow: 1px 0.5px #000000;
+}
+
+.bmi-scale .scale-kelebihan P {
+    color: yellow;
+    text-shadow: 1px 0.5px #000000;
+}
+
+.bmi-scale .scale-kegemukan P {
+    color: red;
+    text-shadow: 1px 0.5px #000000;
+}
+
+
+/* SECTION OUTPUT */
+section.output {
+    margin-bottom: 50px;
+    background-color: black;
+    color: white;
+    width: 90%;
+    max-width: 650px;
+    padding-bottom: 10px;
+    border-radius: 12px;
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+    display: none;
+}
+
+.header-output {
+    background-color: white;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.output #bmi {
+    font-size: 4rem;
+}
+
+.output .keterangan {
+    font-size: medium;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.output #button-output {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px;
+}
+
+.output button {
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.output button:hover {
+    background-color: rgb(202, 202, 202);
+}
+
+/* AKHIR SECTION OUTPUT */
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
 }
