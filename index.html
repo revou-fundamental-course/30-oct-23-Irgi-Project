@@ -9,7 +9,91 @@
 </head>
 
 <body>
-    <h1>Hello World!</h1>
+    <section class="container">
+        <div class="judul-box">
+            <h1>Kalkulator BMI</h1>
+        </div>
+        <div class="input-error">
+            <h3>Kesalahan Input (cek kembali inputan)</h3>
+        </div>
+        <form class="box" id="box">
+            <div class="form-gender">
+                <p>Jenis Kelamin</p>
+                <div class="gender">
+                    <input type="radio" name="gender" id="pria" value="Pria" checked>
+                    <label for="pria">Pria</label>
+                </div>
+                <div class="gender">
+                    <input type="radio" name="gender" id="wanita" value="Wanita">
+                    <label for="wanita">Wanita</label>
+                </div>
+            </div>
+            <div>
+                <label for="usia">Usia (tahun)</label>
+                <input type="number" name="usia" id="usia" value="" placeholder="0">
+            </div>
+            <div>
+                <label for="berat">Berat (kg)</label>
+                <input type="number" name="berat" id="berat" value="" placeholder="0">
+            </div>
+            <div>
+                <label for="tinggi">Tinggi (cm)</label>
+                <input type="number" name="tinggi" id="tinggi" value="" placeholder="0">
+            </div>
+            <div>
+                <button type="reset" onclick="reload()">Reset</button>
+                <button type="button" onclick="prosesBMI()">Submit</button>
+            </div>
+        </form>
+        <div class="bmi-scale">
+            <div class="scale-kurang">
+                <h4>Kekurangan Berat Badan</h4>
+                <p>&lt; 18.5</p>
+            </div>
+            <div class="scale-normal">
+                <h4>Normal (Ideal)</h4>
+                <p>18.5 - 24.9</p>
+            </div>
+            <div class="scale-kelebihan">
+                <h4>Kelebihan Berat Badan</h4>
+                <p>25.0 - 29.9</p>
+            </div>
+            <div class="scale-kegemukan">
+                <h4>Kegemukan (Obesitas)</h4>
+                <p>> 30</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="output">
+        <div class="header-output" id="header-output">
+
+        </div>
+        <div id="bmi">
+            <p>0</p>
+        </div>
+        <div id="status">
+            <p>0</p>
+        </div>
+        <div id="jenis-kelamin">
+            <span id="jk">0</span>
+            <span id="umur">(0)</span>
+        </div>
+        <div class="keterangan" id="keterangan">
+            <p></p>
+        </div>
+        <div id="button-output">
+            <button type="submit">Konsultasi Dokter</button>
+            <button type="submit">Cek Penyakit</button>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <span>Copyright &copy; 2023</span>
+            <span>Irgi</span>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
