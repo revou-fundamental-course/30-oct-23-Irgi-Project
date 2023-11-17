@@ -44,16 +44,16 @@ function ambilDataInput() {
     let status;
 
     let jenisKelamin = document.querySelector('input[name = "gender"]:checked').value
-    let usia = document.getElementById("usia").value
-    let berat = document.getElementById('berat').value
-    let tinggi = document.getElementById('tinggi').value
+    let usia = parseFloat(document.getElementById("usia").value)
+    let berat = parseFloat(document.getElementById('berat').value)
+    let tinggi = parseFloat(document.getElementById('tinggi').value)
 
     status = cekInput(([usia, berat, tinggi]));
 
     if (status === true) {
         showOutput.style.display = "block"
-        let bmiTinggi = parseFloat(tinggi) / 100;
-        let bmiBerat = parseFloat(berat);
+        let bmiTinggi = tinggi / 100;
+        let bmiBerat = berat;
         let bmi = (bmiBerat / (bmiTinggi * bmiTinggi)).toFixed(1);
 
         return ({ jenisKelamin, usia, bmi })
@@ -61,7 +61,7 @@ function ambilDataInput() {
         inputError.style.display = "block";
         setTimeout(() => {
             inputError.style.display = "none";
-        }, 1000);
+        }, 2000);
         return status = false;
     }
 
